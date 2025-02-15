@@ -1,14 +1,9 @@
-# Local Changes
-.next/
-node_modules/
-.env
-
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
 /node_modules
 /.pnp
-.pnp.*  
+.pnp.*
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
@@ -20,7 +15,7 @@ node_modules/
 
 # next.js
 /.next/
-./out/
+/out/
 
 # production
 /build
