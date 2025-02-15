@@ -1,9 +1,11 @@
-const dotenv = require("dotenv");
-const path = require("path");
+// File: src/sanity/testEnv.ts
+import dotenv from "dotenv";
+import path from "path";
 
 // ✅ FORCE LOAD .env FILE
-const envPath = path.resolve(__dirname, "../../.env");
+const envPath: string = path.resolve(__dirname, "../../.env");
 console.log(`📂 Loading .env from: ${envPath}`);
+
 dotenv.config({ path: envPath });
 
 // ✅ CHECK ENV VARIABLES

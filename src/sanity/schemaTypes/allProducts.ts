@@ -1,5 +1,5 @@
 // File: src/sanity/schemaTypes/allProducts.ts
-import { defineType, defineField } from "sanity";
+import { defineType, defineField, } from "sanity";
 
 export default defineType({
   name: "allProducts", // Unique schema name
@@ -62,7 +62,7 @@ export default defineType({
       description: "Optional field for displaying the original price before discount.",
       validation: (Rule) =>
         Rule.min(0).custom((originalPrice, context) => {
-          const price = (context.document as any)?.price;
+          const price = (context.document as { price?: number })?.price;
           if (originalPrice && price !== undefined && originalPrice < price) {
             return "Original price should be greater than or equal to the selling price.";
           }
